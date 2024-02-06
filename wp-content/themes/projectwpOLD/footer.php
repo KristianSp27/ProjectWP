@@ -64,7 +64,7 @@
 	<script src="plugins/google-map/gmap.js"></script>
 	<!-- main js -->
 	<script src="js/custom.js"></script>
-
+<?php wp_footer(); ?>
 
 </body>
 
