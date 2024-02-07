@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html <?php language_attributes();?>>
   <head>
+  <meta charset="<?php bloginfo( 'charset' ); ?>" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <?php wp_head(); ?>
     <!-- Required meta tags always come first -->
-    <meta charset="utf-8">
+    <!-- <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta http-equiv="x-ua-compatible" content="ie=edge"> -->
+
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
-    <link rel="stylesheet" href="css/ionicons.min.css">
-    <link rel="stylesheet" href="css/owl.carousel.css">
-    <link rel="stylesheet" href="css/owl.theme.css">
-    <link rel="stylesheet" href="css/style.css">
+    
   </head>
   <body>
     <header id="home" class="gradient-violat">

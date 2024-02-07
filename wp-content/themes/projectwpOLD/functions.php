@@ -3,7 +3,7 @@
 function revolve_enqueue_assets() {
     $theme_dir_assets_url = get_template_directory_uri() . '/projectwpOLD/';
 
-    wp_enqueue_style('bootstrap-min-js'. $theme_dir_assets_url . 'http://localhost/ProjectWP/wp-content/themes/projectwpOLD/plugins/bootstrap/css/bootstrap.min.css');
+    wp_enqueue_style('bootstrap'. $theme_dir_assets_url . 'bootstrap.min.css');
     // <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 
 	// <!-- THEME CSS
