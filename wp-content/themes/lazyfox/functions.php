@@ -4,6 +4,10 @@
 if(! defined('LAZYFOX_ASSETS_VERSION')) {
     define('LAZYFOX_ASSETS_VERSION', '1.0');
 }
+
+if ( ! defined( 'LAZYFOX_ASSETS_URL' ) ) {
+    define( 'LAZYFOX_ASSETS_URL', get_template_directory_uri() );
+}
 /**
  * Function that enqueue all of our assets
  *
@@ -15,12 +19,20 @@ function lazyfox_enqueue_assets() {
 
     $theme_dir_assets_url = get_template_directory_uri();
     
-    wp_enqueue_style('bootstrap', $theme_dir_assets_url . '/css/bootstrap.min.css', array(), LAZYFOX_ASSETS_VERSION);
-    
-    
-    // <link rel="stylesheet" href="css/ionicons.min.css">
-    // <link rel="stylesheet" href="css/owl.carousel.css">
-    // <link rel="stylesheet" href="css/owl.theme.css">
-    // <link rel="stylesheet" href="css/style.css">
+    //Theme styles
+    wp_enqueue_style('bootstrap', LAZYFOX_ASSETS_URL . '/css/bootstrap.min.css', array(), LAZYFOX_ASSETS_VERSION);
+    wp_enqueue_style('ionicons', LAZYFOX_ASSETS_URL . '/css/ionicons.min.css', array(), LAZYFOX_ASSETS_VERSION);
+    wp_enqueue_style('owl-carousel', LAZYFOX_ASSETS_URL . '/css/owl.carousel.css', array(), LAZYFOX_ASSETS_VERSION);
+    wp_enqueue_style('owl-theme', LAZYFOX_ASSETS_URL . '/css/owl.theme.css', array(), LAZYFOX_ASSETS_VERSION);
+    wp_enqueue_style('style', LAZYFOX_ASSETS_URL . '/css/style.css', array(), LAZYFOX_ASSETS_VERSION);
+
+    //Theme scripts
+    wp_enqueue_script('bootstrap.min', LAZYFOX_ASSETS_URL . '/js/bootstrap.min.js', array('jquery'), LAZYFOX_ASSETS_VERSION, array());
+    wp_enqueue_script('owl.carousel', LAZYFOX_ASSETS_URL . '/js/owl.carousel.min.js', array('jquery'), LAZYFOX_ASSETS_VERSION, array());
+    wp_enqueue_script('script', LAZYFOX_ASSETS_URL . '/js/script.js', array('jquery'), LAZYFOX_ASSETS_VERSION, array());
+
+    // <script src="js/bootstrap.min.js"></script>
+    // <script src="js/owl.carousel.min.js"></script>
+    // <script src="js/script.js"></script>
 }
 add_action('wp_enqueue_scripts', 'lazyfox_enqueue_assets');
