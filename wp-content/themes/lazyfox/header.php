@@ -29,7 +29,7 @@
               <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="#"><span class="logo-wraper logo-white">
-                <img src="images/Logo.png" alt="">lazy fox
+                <img src="<?php echo LAZYFOX_ASSETS_URL; ?>/images/Logo.png" alt="">lazy fox
               </span></a>
           </div>
 

@@ -11,7 +11,7 @@
               <a class="btn-video text-white" href="#"><span class="icon-rounded bordered-ios"><i class="ion-ios-play-outline"></i></span>watch tutorial</a>
             </div>
             <div class="image-container text-center sm-display-none">
-              <img class="img-responsive" src="images/mockuo2.png" alt="">
+              <img class="img-responsive" src="<?php echo LAZYFOX_ASSETS_URL; ?>/images/mockuo2.png" alt="">
             </div>
           </div>
         </div>
@@ -34,7 +34,7 @@
         </div>
       </div>
     </section>
-    <section id="feature" class="padding-top-bottom-120 bg-image-fit-50" style="background:url(images/1_back.png)">
+    <section id="feature" class="padding-top-bottom-120 bg-image-fit-50" style="background:url(<?php echo LAZYFOX_ASSETS_URL; ?>/images/1_back.png)">
       <div class="container">
         <div class="row">
           <div class="col-md-6">
@@ -73,7 +73,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-4">
-            <img class="img-responsive sm-display-none" src="images/hand_phone.png" alt="">
+            <img class="img-responsive sm-display-none" src="<?php echo LAZYFOX_ASSETS_URL; ?>/images/hand_phone.png" alt="">
           </div>
           <div class="col-md-8">
             <div class="row">
@@ -131,7 +131,7 @@
         <div class="row">
           <div class="col-md-4">
             <div class="card">
-              <img class="card-img-top img-responsive max-width-100" src="images/b1.png" alt="Card image cap">
+              <img class="card-img-top img-responsive max-width-100" src="<?php echo LAZYFOX_ASSETS_URL; ?>/images/b1.png" alt="Card image cap">
               <div class="card-block">
                 <p class="card-text"><small class="text-muted blog-category">web design</small></p>
                 <h4 class="card-title">Make your website with best web Tools.</h4>
@@ -143,7 +143,7 @@
           </div>
           <div class="col-md-4">
             <div class="card">
-              <img class="card-img-top img-responsive max-width-100" src="images/b2.png" alt="Card image cap">
+              <img class="card-img-top img-responsive max-width-100" src="<?php echo LAZYFOX_ASSETS_URL; ?>/images/b2.png" alt="Card image cap">
               <div class="card-block">
                 <p class="card-text"><small class="text-muted blog-category">web design</small></p>
                 <h4 class="card-title">Make your website with best web Tools.</h4>
@@ -155,7 +155,7 @@
           </div>
           <div class="col-md-4">
             <div class="card">
-              <img class="card-img-top img-responsive max-width-100" src="images/b3.png" alt="Card image cap">
+              <img class="card-img-top img-responsive max-width-100" src="<?php echo LAZYFOX_ASSETS_URL; ?>/images/b3.png" alt="Card image cap">
               <div class="card-block">
                 <p class="card-text"><small class="text-muted blog-category">web design</small></p>
                 <h4 class="card-title">Make your website with best web Tools.</h4>
@@ -181,7 +181,7 @@
               <div>
                 <div class="testimonial-container">
                   <div class="client-details text-center">
-                    <img src="images/t-1.png" alt="">
+                    <img src="<?php echo LAZYFOX_ASSETS_URL; ?>/images/t-1.png" alt="">
                     <h5 class="client-name">Arix Wonder</h5>
                     <p class="client-designation">CEO Of LVATO</p>
                     <ul class="social-list">
@@ -199,7 +199,7 @@
               <div>
                 <div class="testimonial-container">
                   <div class="client-details text-center">
-                    <img src="images/t-1.png" alt="">
+                    <img src="<?php echo LAZYFOX_ASSETS_URL; ?>/images/t-1.png" alt="">
                     <h5 class="client-name">Arix Wonder</h5>
                     <p class="client-designation">CEO Of LVATO</p>
                     <ul class="social-list">
@@ -217,7 +217,7 @@
               <div>
                 <div class="testimonial-container">
                   <div class="client-details text-center">
-                    <img src="images/t-1.png" alt="">
+                    <img src="<?php echo LAZYFOX_ASSETS_URL; ?>/images/t-1.png" alt="">
                     <h5 class="client-name">Arix Wonder</h5>
                     <p class="client-designation">CEO Of LVATO</p>
                     <ul class="social-list">
@@ -241,7 +241,7 @@
       <div class="row">
         <div class="col-md-6">
           <div class="image-wraper">
-            <img class="img-responsive" src="images/support.png" alt="">
+            <img class="img-responsive" src="<?php echo LAZYFOX_ASSETS_URL; ?>/images/support.png" alt="">
           </div>
         </div>
         <div class="col-md-5">
@@ -256,7 +256,7 @@
     <section id="newsletter" class="padding-top-bottom-120 newsletter">
       <div class="container">
         <div class="row">
-          <div class="col-md-8 sunscription-wraper-outer col-md-offset-2 bg-fit" style="background:url(images/newsletter.png)">
+          <div class="col-md-8 sunscription-wraper-outer col-md-offset-2 bg-fit" style="background:url(<?php echo LAZYFOX_ASSETS_URL; ?>/images/newsletter.png)">
             <div class="row">
               <div class="col-md-8 col-md-offset-2 padding-top-bottom-90">
                 <div class="subscription-wraper text-center">

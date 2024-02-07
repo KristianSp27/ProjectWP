@@ -4,7 +4,7 @@
           <div class="col-md-3">
             <div class="footer-left-content">
               <div class="logo-colored">
-                <img src="images/Logo_color.png" alt="">lazy fox
+                <img src="<?php echo LAZYFOX_ASSETS_URL; ?>/images/Logo_color.png" alt="">lazy fox
               </div>
               <div class="content">
                 <p class="margin-bottom-30 margin-top-30">Built using the latest web technologies like css3, and jQuery, rest assured Sedna look.</p>
