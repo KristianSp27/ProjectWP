@@ -31,6 +31,7 @@ function lazyfox_enqueue_assets() {
     //Theme scripts
     wp_enqueue_script('bootstrap.min', LAZYFOX_ASSETS_URL . '/js/bootstrap.min.js', array('jquery'), LAZYFOX_ASSETS_VERSION, array());
     wp_enqueue_script('owl.carousel', LAZYFOX_ASSETS_URL . '/js/owl.carousel.min.js', array('jquery'), LAZYFOX_ASSETS_VERSION, array());
+    wp_enqueue_script('owl.carousel', LAZYFOX_ASSETS_URL . '/js/owl.carousel.js', array('jquery'), LAZYFOX_ASSETS_VERSION, array());
     wp_enqueue_script('script', LAZYFOX_ASSETS_URL . '/js/script.js', array('jquery'), LAZYFOX_ASSETS_VERSION, array());
 
     // <script src="js/bootstrap.min.js"></script>
@@ -47,3 +48,5 @@ function lazyfox_register_my_menus() {
     );
   }
   add_action( 'init', 'lazyfox_register_my_menus' );
+
+
