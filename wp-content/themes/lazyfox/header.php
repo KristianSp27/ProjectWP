@@ -33,8 +33,8 @@
               </span></a>
           </div>
 
-          <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+         <!-- Collect the nav links, forms, and other content for toggling -->
+         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav  navbar-right">
               <li class="active"><a href="#home">Home <span class="sr-only">(current)</span></a></li>
               <li><a href="#blog-card">About</a></li>
@@ -46,40 +46,8 @@
           </div><!-- /.navbar-collapse -->
           <hr class="navbar-divider">
         </div><!-- /.container-fluid -->
-        <section id="introduction" class="gradient-violat padding-top-90 home-slider">
-      <div id="home-slider" class="owl-carousel">
-        <div>
-          <div class="sliding-card-with-bottom-image text-center padding-top-90">
-            <h2 class="cta-heading text-white">Lazy Fox HTML5 Landing page</h2>
-            <p class="text-white slider-para">Awesome Stylish Template Powered By THEMEWAGON</p>
-            <div class="cta-btn-group">
-              <a class="btn btn-orange border-none btn-rounded-corner" href="#">Download <span class="icon-on-button"><i class="ion-ios-cloud-download-outline"></i></span></a>
-              <a class="btn-video text-white" href="#"><span class="icon-rounded bordered-ios"><i class="ion-ios-play-outline"></i></span>watch tutorial</a>
-            </div>
-            <div class="image-container text-center sm-display-none">
-              <img class="img-responsive" src="<?php echo LAZYFOX_ASSETS_URL; ?>/images/mockuo2.png" alt="">
-            </div>
-          </div>
-        </div>
-        
-        <div>
-          <div class="container">
-            <div class="row">
-              <div class="image-right-slide-bg clearfix" style="background-image:url(<?php echo LAZYFOX_ASSETS_URL; ?>/images/mockuo.png)">
-                <div class="col-md-12">
-                  <h2 class="cta-heading text-white">Lazy Fox HTML5 Landing page</h2>
-                  <p class="text-white slider-para">Smooth Scroll and Gradient style</p>
-                  <div class="cta-btn-group">
-                    <a class="btn btn-orange border-none btn-rounded-corner" href="#">Download <span class="icon-on-button"><i class="ion-ios-cloud-download-outline"></i></span></a>
-                    <a class="btn btn-white border-none btn-rounded-corner" href="#">Live demo<span class="icon-on-button"><i class="ion-ios-arrow-thin-right"></i></span></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+      </nav>
+         
         <?php
         if (has_nav_menu('header-menu')) {
           wp_nav_menu(  $args = array(
@@ -94,5 +62,7 @@
         }
        
         ?>
-      </nav>
+      
     </header>
+    
+ 

@@ -1,6 +1,6 @@
 /*=-=-==-= navbar-scroll  =-=-=-=====-*/
 
-$(document).ready(function () {
+jQuery(document).ready(function () {
   $(window).scroll(function () {
     // check if scroll event happened
     if ($(document).scrollTop() > 150) {
@@ -16,7 +16,7 @@ $(document).ready(function () {
 
 /*=-=-=-===-==-=  Navbar pop-up =-=-=-=-=-=-=-=*/
 
-$(document).ready(function () {
+jQuery(document).ready(function () {
   var $window = $(window),
     $body = $("body"),
     $header = $("#header"),
