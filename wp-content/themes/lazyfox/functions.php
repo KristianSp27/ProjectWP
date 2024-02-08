@@ -8,6 +8,8 @@ if(! defined('LAZYFOX_ASSETS_VERSION')) {
 if ( ! defined( 'LAZYFOX_ASSETS_URL' ) ) {
     define( 'LAZYFOX_ASSETS_URL', get_template_directory_uri() );
 }
+
+add_theme_support('title-tag');
 /**
  * Function that enqueue all of our assets
  *
@@ -36,3 +38,12 @@ function lazyfox_enqueue_assets() {
     // <script src="js/script.js"></script>
 }
 add_action('wp_enqueue_scripts', 'lazyfox_enqueue_assets');
+
+function lazyfox_register_my_menus() {
+    register_nav_menus(
+      array(
+        'header-menu' => __( 'Header Menu' ),
+      )
+    );
+  }
+  add_action( 'init', 'lazyfox_register_my_menus' );
