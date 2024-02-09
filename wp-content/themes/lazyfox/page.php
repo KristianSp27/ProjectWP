@@ -7,7 +7,7 @@
     <section id="testimonial" class="testimonial-section padding-top-bottom-90 gradient-violat">
       <div class="container">
         <div class="heading-wraper text-center">
-          <h4 class="text-white">in the press</h4>
+          <h1 class="text-white"><?php the_title(); ?></h1>
           <hr class="heading-devider gradient-orange">
         </div>
         <div class="row">
@@ -27,7 +27,9 @@
                   </div>
                   <div class="testimonial-content">
                     <p><i class="ion-quote"></i></p>
-                    <p class="testimonial-speech">Built using the latest web technologies like html5, css3, and jQuery, rest assured Sedna will look smashing on every device under the sun.Built using the latest web technologies like html5, css3, and jQuery.</p>
+                    <p class="testimonial-speech">
+                        <?php the_content(); ?>
+                    </p>
                   </div>
                 </div>
               </div>
