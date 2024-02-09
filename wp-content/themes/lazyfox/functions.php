@@ -34,9 +34,7 @@ function lazyfox_enqueue_assets() {
     wp_enqueue_script('owl.carousel', LAZYFOX_ASSETS_URL . '/js/owl.carousel.js', array('jquery'), LAZYFOX_ASSETS_VERSION, array());
     wp_enqueue_script('script', LAZYFOX_ASSETS_URL . '/js/script.js', array('jquery'), LAZYFOX_ASSETS_VERSION, array());
 
-    // <script src="js/bootstrap.min.js"></script>
-    // <script src="js/owl.carousel.min.js"></script>
-    // <script src="js/script.js"></script>
+
 }
 add_action('wp_enqueue_scripts', 'lazyfox_enqueue_assets');
 
