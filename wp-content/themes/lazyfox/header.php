@@ -41,7 +41,13 @@
               <li><a href="#introduction">Intro</a></li>
               <li><a href="#feature">Product</a></li>
               <li><a href="#newsletter">Contact</a></li>
-              <li><a href="#" class="btn btn-orange border-none btn-rounded-corner btn-navbar">Download<span class="icon-on-button"><i class="ion-ios-cloud-download-outline"></i></span></a></li>
+              <li>
+  <button id="dark-mode-toggle" class="btn btn-orange border-none btn-rounded-corner btn-navbar">Toggle Dark Mode</button>
+
+              </li>
+           <li>
+
+           </li>
             </ul>
           </div><!-- /.navbar-collapse -->
           <hr class="navbar-divider">
