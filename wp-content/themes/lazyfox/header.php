@@ -37,7 +37,7 @@
          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav  navbar-right">
               <li class="active"><a href="<?php echo home_url(); ?>">Home <span class="sr-only">(current)</span></a></li>
-              <li><a href="#blog-card">About</a></li>
+              <li><a href="#blog-card">Blog</a></li>
               <li><a href="#introduction">Intro</a></li>
               <li><a href="#feature">Product</a></li>
               <li><a href="#newsletter">Contact</a></li>
