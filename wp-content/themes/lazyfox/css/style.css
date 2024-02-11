@@ -52,7 +52,10 @@ p{
 	vertical-align: middle;
 }
 .navbar{
-	background-color: transparent !important;
+	background: linear-gradient(to right, 
+        rgb(14, 21, 58) 0%, 
+        rgb(244, 202, 216) 100%
+    );
 	border-color: transparent !important;
 	border:0px;
 	padding-top: 30px;
@@ -63,11 +66,13 @@ p{
 }
 .navbar-brand img{
 	max-height: 50px;
+	margin-top: 30px;
 }
 .navbar-default .navbar-nav>li>a {
     font-family: 'Montserrat', sans-serif;
     color: #fff;
     text-transform: uppercase;
+	padding-top: 50px;
 }
 .navbar-default .navbar-nav>li>a, .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
     color: #fff;
@@ -86,6 +91,7 @@ p{
 .navbar-nav>li>a.btn-navbar{
 	padding-left: 40px;
 	padding-right: 40px;
+	padding-top: 50px;
 }
 .navbar-divider{
 	width:100%;
@@ -446,6 +452,7 @@ ul.social-list li a:hover, ul.social-list li a:focus{
 }
 .btn-navbar{
 	line-height: 1;
+	margin-top: 45px;
 }
 .btn-link i{
 	font-size: 18px;
