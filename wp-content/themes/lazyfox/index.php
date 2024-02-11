@@ -32,6 +32,54 @@
         </div>
       </div>
     </section>
+   <section id="blog-card" class="padding-top-bottom-90">
+  <div class="container">
+    <div class="heading-wraper text-center margin-bottom-80">
+      <h4>Latest Published</h4>
+      <hr class="heading-devider gradient-orange">
+    </div>
+
+    <div class="row">
+
+      <?php 
+      // Define the query to get the latest posts
+      $args = array(
+        'post_type'      => 'post',
+        'posts_per_page' => 3, // Number of posts to display
+      );
+
+      $query = new WP_Query($args);
+
+      // Loop through the posts
+      while ($query->have_posts()) : $query->the_post();
+      ?>
+
+        <div class="col-md-4">
+          <div class="card">
+            <?php
+            // Display the post thumbnail
+            if (has_post_thumbnail()) {
+              the_post_thumbnail('full', array('class' => 'card-img-top img-responsive max-width-100'));
+            }
+            ?>
+            <div class="card-block">
+              <p class="card-text"><small class="text-muted blog-category"><?php the_category(', '); ?></small></p>
+              <h4 class="card-title"><?php the_title(); ?></h4>
+              <p class="card-text"><small class="text-muted italic"><?php echo get_the_date(); ?></small></p>
+              <p class="card-text"><?php the_excerpt(); ?></p>
+              <a href="<?php the_permalink(); ?>" class="btn btn-link">Read more <span><i class="ion-ios-arrow-thin-right"></i></span></a>
+            </div>
+          </div>
+        </div>
+
+      <?php endwhile;
+      // Reset post data
+      wp_reset_postdata();
+      ?>
+
+    </div>
+  </div>
+</section>
     <section id="feature" class="padding-top-bottom-120 bg-image-fit-50" style="background:url(<?php echo LAZYFOX_ASSETS_URL; ?>/images/1_back.png)">
       <div class="container">
         <div class="row">
@@ -120,124 +168,64 @@
         </div>
       </div>
     </section>
-    <section id="blog-card" class="padding-top-bottom-90">
+ 
+
+    <section id="testimonial" class="testimonial-section padding-top-bottom-90 gradient-violat">
   <div class="container">
-    <div class="heading-wraper text-center margin-bottom-80">
-      <h4>Latest Published</h4>
+    <div class="heading-wraper text-center">
+      <h4 class="text-white">In the Press</h4>
       <hr class="heading-devider gradient-orange">
     </div>
-
     <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <div id="testimonial-carousel" class="owl-carousel">
 
-      <?php
-      // Define the query to get the latest posts
-      $args = array(
-        'post_type'      => 'post',
-        'posts_per_page' => 3, // Number of posts to display
-      );
+          <?php
+          // Define the query to get the latest three posts
+          $args = array(
+            'post_type'      => 'post',
+            'posts_per_page' => 3,
+          );
 
-      $query = new WP_Query($args);
+          $query = new WP_Query($args);
 
-      // Loop through the posts
-      while ($query->have_posts()) : $query->the_post();
-      ?>
+          // Loop through the posts
+          while ($query->have_posts()) : $query->the_post();
+          ?>
 
-        <div class="col-md-4">
-          <div class="card">
-            <?php
-            // Display the post thumbnail
-            if (has_post_thumbnail()) {
-              the_post_thumbnail('full', array('class' => 'card-img-top img-responsive max-width-100'));
-            }
-            ?>
-            <div class="card-block">
-              <p class="card-text"><small class="text-muted blog-category"><?php the_category(', '); ?></small></p>
-              <h4 class="card-title"><?php the_title(); ?></h4>
-              <p class="card-text"><small class="text-muted italic"><?php echo get_the_date(); ?></small></p>
-              <p class="card-text"><?php the_excerpt(); ?></p>
-              <a href="<?php the_permalink(); ?>" class="btn btn-link">Read more <span><i class="ion-ios-arrow-thin-right"></i></span></a>
+            <div>
+              <div class="testimonial-container">
+                <div class="client-details text-center">
+                  <?php
+                  // Display the post thumbnail
+                  if (has_post_thumbnail()) {
+                    the_post_thumbnail('full', array('class' => 'img-responsive'));
+                  }
+                  ?>
+                  <h5 class="client-name"><?php the_title(); ?></h5>
+                  <p class="client-designation"><?php echo get_post_meta(get_the_ID(), 'client_designation', true); ?></p>
+                  <ul class="social-list">
+                    <!-- Add social media links if applicable -->
+                  </ul>
+                </div>
+                <div class="testimonial-content">
+                  <p><i class="ion-quote"></i></p>
+                  <p class="testimonial-speech"><?php the_excerpt(); ?></p>
+                </div>
+              </div>
             </div>
-          </div>
+
+          <?php endwhile;
+          // Reset post data
+          wp_reset_postdata();
+          ?>
+
         </div>
-
-      <?php endwhile;
-      // Reset post data
-      wp_reset_postdata();
-      ?>
-
+      </div>
     </div>
   </div>
 </section>
 
-    <section id="testimonial" class="testimonial-section padding-top-bottom-90 gradient-violat">
-      <div class="container">
-        <div class="heading-wraper text-center">
-          <h4 class="text-white">in the press</h4>
-          <hr class="heading-devider gradient-orange">
-        </div>
-        <div class="row">
-          <div class="col-md-8 col-md-offset-2">
-            <div id="testimonial-carousel" class="owl-carousel">
-              <div>
-                <div class="testimonial-container">
-                  <div class="client-details text-center">
-                    <img src="<?php echo LAZYFOX_ASSETS_URL; ?>/images/t-1.png" alt="">
-                    <h5 class="client-name">Arix Wonder</h5>
-                    <p class="client-designation">CEO Of LVATO</p>
-                    <ul class="social-list">
-                      <li><a href=""><i class="ion-social-linkedin"></i></a></li>
-                      <li><a href=""><i class="ion-social-pinterest"></i></a></li>
-                      <li><a href=""><i class="ion-social-googleplus"></i></a></li>
-                    </ul>
-                  </div>
-                  <div class="testimonial-content">
-                    <p><i class="ion-quote"></i></p>
-                    <p class="testimonial-speech">Built using the latest web technologies like html5, css3, and jQuery, rest assured Sedna will look smashing on every device under the sun.Built using the latest web technologies like html5, css3, and jQuery.</p>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div class="testimonial-container">
-                  <div class="client-details text-center">
-                    <img src="<?php echo LAZYFOX_ASSETS_URL; ?>/images/t-1.png" alt="">
-                    <h5 class="client-name">Arix Wonder</h5>
-                    <p class="client-designation">CEO Of LVATO</p>
-                    <ul class="social-list">
-                      <li><a href=""><i class="ion-social-linkedin"></i></a></li>
-                      <li><a href=""><i class="ion-social-pinterest"></i></a></li>
-                      <li><a href=""><i class="ion-social-googleplus"></i></a></li>
-                    </ul>
-                  </div>
-                  <div class="testimonial-content">
-                    <p><i class="ion-quote"></i></p>
-                    <p class="testimonial-speech">Built using the latest web technologies like html5, css3, and jQuery, rest assured Sedna will look smashing on every device under the sun.Built using the latest web technologies like html5, css3, and jQuery.</p>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div class="testimonial-container">
-                  <div class="client-details text-center">
-                    <img src="<?php echo LAZYFOX_ASSETS_URL; ?>/images/t-1.png" alt="">
-                    <h5 class="client-name">Arix Wonder</h5>
-                    <p class="client-designation">CEO Of LVATO</p>
-                    <ul class="social-list">
-                      <li><a href=""><i class="ion-social-linkedin"></i></a></li>
-                      <li><a href=""><i class="ion-social-pinterest"></i></a></li>
-                      <li><a href=""><i class="ion-social-googleplus"></i></a></li>
-                    </ul>
-                  </div>
-                  <div class="testimonial-content">
-                    <p><i class="ion-quote"></i></p>
-                    <p class="testimonial-speech">Built using the latest web technologies like html5, css3, and jQuery, rest assured Sedna will look smashing on every device under the sun.Built using the latest web technologies like html5, css3, and jQuery.</p>
-                  </div>
-                </div>
-              </div>
-            </div>              
-          </div>
-        </div>
-      </div>
-    </section>
-  
    
 
 <?php get_footer(); ?>
