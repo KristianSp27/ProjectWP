@@ -6,21 +6,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <?php wp_head(); ?>
-    <!-- Required meta tags always come first -->
-    <!-- <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="x-ua-compatible" content="ie=edge"> -->
+   
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
 
-    <!-- Bootstrap CSS -->
     
   </head>
   <body>
     <header id="home" class="gradient-violat">
       <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
               <span class="sr-only">Toggle navigation</span>
@@ -33,7 +28,6 @@
               </span></a>
           </div>
 
-         <!-- Collect the nav links, forms, and other content for toggling -->
          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav  navbar-right">
               <li class="active"><a href="<?php echo home_url(); ?>">Home <span class="sr-only">(current)</span></a></li>
