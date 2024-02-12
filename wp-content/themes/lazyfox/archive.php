@@ -17,8 +17,7 @@
                             <div class="testimonial-container">
                                 <div class="client-details text-center">
                                     <img src="<?php echo LAZYFOX_ASSETS_URL; ?>/images/t-1.png" alt="">
-                                    <h5 class="client-name"><?php the_title(); ?></h5>
-                                    <p class="client-designation"><?php the_excerpt(); ?></p>
+                                   
                                     <ul class="social-list">
                                         <li><a href=""><i class="ion-social-linkedin"></i></a></li>
                                         <li><a href=""><i class="ion-social-pinterest"></i></a></li>
