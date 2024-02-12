@@ -6,7 +6,7 @@
         <div>
           <div class="sliding-card-with-bottom-image text-center padding-top-90">
             <h2 class="cta-heading text-white">Lazy Fox HTML5 Landing page</h2>
-            <p class="text-white slider-para">Awesome Stylish Template Powered By THEMEWAGON</p>
+            <p class="text-white slider-para">Awesome Stylish Template for a Blog Powered By THEMEWAGON</p>
             <div class="cta-btn-group">
             </div>
             <div class="image-container text-center sm-display-none">
@@ -115,7 +115,7 @@
         </div>
       </div>
     </section>
-    <section id="services" class="padding-top-90">
+    <!-- <section id="services" class="padding-top-90">
       <div class="container">
         <div class="row">
           <div class="col-md-4">
@@ -153,8 +153,8 @@
           </div>
         </div>
       </div>
-    </section>
-    <section id="cta" class="gradient-violat cta padding-top-bottom-90">
+    </section> -->
+    <!-- <section id="cta" class="gradient-violat cta padding-top-bottom-90">
       <div class="container">
         <div class="row">
           <div class="col-md-12 text-center">
@@ -167,64 +167,68 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
  
 
     <section id="testimonial" class="testimonial-section padding-top-bottom-90 gradient-violat">
-  <div class="container">
-    <div class="heading-wraper text-center">
-      <h4 class="text-white">In the Press</h4>
-      <hr class="heading-devider gradient-orange">
-    </div>
-    <div class="row">
-      <div class="col-md-8 col-md-offset-2">
-        <div id="testimonial-carousel" class="owl-carousel">
-
-          <?php
-          // Define the query to get the latest three posts
-          $args = array(
-            'post_type'      => 'post',
-            'posts_per_page' => 3,
-          );
-
-          $query = new WP_Query($args);
-
-          // Loop through the posts
-          while ($query->have_posts()) : $query->the_post();
-          ?>
-
-            <div>
-              <div class="testimonial-container">
-                <div class="client-details text-center">
-                  <?php
-                  // Display the post thumbnail
-                  if (has_post_thumbnail()) {
-                    the_post_thumbnail('full', array('class' => 'img-responsive'));
-                  }
-                  ?>
-                  <h5 class="client-name"><?php the_title(); ?></h5>
-                  <p class="client-designation"><?php echo get_post_meta(get_the_ID(), 'client_designation', true); ?></p>
-                  <ul class="social-list">
-                    <!-- Add social media links if applicable -->
-                  </ul>
-                </div>
-                <div class="testimonial-content">
-                  <p><i class="ion-quote"></i></p>
-                  <p class="testimonial-speech"><?php the_excerpt(); ?></p>
-                </div>
-              </div>
-            </div>
-
-          <?php endwhile;
-          // Reset post data
-          wp_reset_postdata();
-          ?>
-
+    <div class="container">
+        <div class="heading-wraper text-center">
+            <h4 class="text-white">In the Press</h4>
+            <hr class="heading-devider gradient-orange">
         </div>
-      </div>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div id="testimonial-carousel" class="owl-carousel">
+
+                    <?php
+                    $args = array(
+                        'post_type'      => 'post',
+                        'posts_per_page' => 3,
+                    );
+
+                    $query = new WP_Query($args);
+
+                    while ($query->have_posts()) : $query->the_post();
+                    ?>
+
+                        <div>
+                            <div class="testimonial-container">
+                                <div class="client-details text-center">
+                                    <?php
+                                    if (has_post_thumbnail()) {
+                                        the_post_thumbnail('full', array('class' => 'img-responsive mx-auto d-block'));
+                                    } else {
+                                        $defaultImageLink = LAZYFOX_ASSETS_URL . '/images/t-1.png';
+                                        echo '<img src="' . esc_url($defaultImageLink) . '" alt="Default Thumbnail" class="img-responsive mx-auto d-block">';
+                                    }
+                                    ?>
+                                    <h5 class="client-name"><?php the_title(); ?></h5>
+                                    <p class="client-designation"><?php echo get_post_meta(get_the_ID(), 'client_designation', true); ?></p>
+                                    <ul class="social-list">
+                                        <li><a href=""><i class="ion-social-linkedin"></i></a></li>
+                                        <li><a href=""><i class="ion-social-pinterest"></i></a></li>
+                                        <li><a href=""><i class="ion-social-googleplus"></i></a></li>
+                                    </ul>
+                                </div>
+                                <div class="testimonial-content">
+                                    <p><i class="ion-quote"></i></p>
+                                    <p class="testimonial-speech"><?php the_excerpt(); ?></p>
+                                </div>
+                            </div>
+                        </div>
+
+                    <?php endwhile;
+                    wp_reset_postdata();
+                    ?>
+
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
 </section>
+
+
+
 
    
 
