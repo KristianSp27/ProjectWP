@@ -191,29 +191,29 @@
                     while ($query->have_posts()) : $query->the_post();
                     ?>
 
-                        <div>
-                            <div class="testimonial-container">
-                                <div class="client-details text-center">
-                                    <?php
-                                    if (has_post_thumbnail()) {
-                                        the_post_thumbnail('full', array('class' => 'img-responsive mx-auto d-block'));
-                                    } else {
-                                        $defaultImageLink = LAZYFOX_ASSETS_URL . '/images/t-1.png';
-                                        echo '<img src="' . esc_url($defaultImageLink) . '" alt="Default Thumbnail" class="img-responsive mx-auto d-block">';
-                                    }
-                                    ?>
-                                    <h5 class="client-name"><?php the_title(); ?></h5>
-                                    <p class="client-designation"><?php echo get_post_meta(get_the_ID(), 'client_designation', true); ?></p>
-                                    <ul class="social-list">
-                                        <li><a href=""><i class="ion-social-linkedin"></i></a></li>
-                                        <li><a href=""><i class="ion-social-pinterest"></i></a></li>
-                                        <li><a href=""><i class="ion-social-googleplus"></i></a></li>
-                                    </ul>
-                                </div>
-                                <div class="testimonial-content">
+                        <div class="testimonial-container">
+                            <div class="client-details text-center">
+                                <?php
+                                if (has_post_thumbnail()) {
+                                    the_post_thumbnail('full', array('class' => 'img-responsive mx-auto d-block'));
+                                } else {
+                                    $defaultImageLink = LAZYFOX_ASSETS_URL . '/images/t-1.png';
+                                    echo '<img src="' . esc_url($defaultImageLink) . '" alt="Default Thumbnail" class="img-responsive mx-auto d-block">';
+                                }
+                                ?>
+                                <h5 class="client-name"><?php the_title(); ?></h5>
+                                <p class="client-designation"><?php echo get_post_meta(get_the_ID(), 'client_designation', true); ?></p>
+                                <ul class="social-list">
+                                    <li><a href=""><i class="ion-social-linkedin"></i></a></li>
+                                    <li><a href=""><i class="ion-social-pinterest"></i></a></li>
+                                    <li><a href=""><i class="ion-social-googleplus"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="testimonial-content">
+                                <a href="<?php the_permalink(); ?>">
                                     <p><i class="ion-quote"></i></p>
                                     <p class="testimonial-speech"><?php the_excerpt(); ?></p>
-                                </div>
+                                </a>
                             </div>
                         </div>
 
@@ -226,6 +226,7 @@
         </div>
     </div>
 </section>
+
 
 
 
