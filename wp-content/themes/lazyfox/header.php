@@ -48,20 +48,19 @@
         </div><!-- /.container-fluid -->
       </nav>
          
-        <?php
-        // if (has_nav_menu('header-menu')) {
-        //   wp_nav_menu(  $args = array(
-        //     'menu'				=> "bs-example-navbar-collapse-1", // (int|string|WP_Term) Desired menu. Accepts a menu ID, slug, name, or object.
-        //     'menu_class'		=> "nav navbar-nav  navbar-right", // (string) CSS class to use for the ul element which forms the menu. Default 'menu'.
-        //     'menu_id'			=> "bs-example-navbar-collapse-1", // (string) The ID that is applied to the ul element which forms the menu. Default is the menu slug, incremented.
-        //     'container'			=> "container", // (string) Whether to wrap the ul, and what to wrap it with. Default 'div'.
-        //     'container_class'	=> "", // (string) Class that is applied to the container. Default 'menu-{menu slug}-container'.
-        //     'container_id'		=> "", // (string) The ID that is applied to the container.
-        //     'theme_location'	=> "header_menu", // (string) Theme location to be used. Must be registered with register_nav_menu() in order to be selectable by the user.
-        //   ) );
-        // }
-       
-        ?>
+        
+      <?php
+if (has_nav_menu('header-menu')) {
+    wp_nav_menu(array(
+        'theme_location' => 'header-menu',
+        'menu_class'     => 'nav navbar-nav navbar-right',
+        'container'      => 'div',
+        'container_class'=> 'collapse navbar-collapse',
+        'container_id'   => 'bs-example-navbar-collapse-1',
+    ));
+}
+?>
+
       
     </header>
     
