@@ -32,9 +32,6 @@
             <ul class="nav navbar-nav  navbar-right">
               <li class="active"><a href="<?php echo home_url(); ?>">Home <span class="sr-only">(current)</span></a></li>
               <li><a href="#blog-card">Blog</a></li>
-              <li><a href="#introduction">Intro</a></li>
-              <li><a href="#feature">Product</a></li>
-              <li><a href="#newsletter">Contact</a></li>
               <li>
   <button id="dark-mode-toggle" class="btn btn-orange border-none btn-rounded-corner btn-navbar">Toggle Dark Mode</button>
 
@@ -45,11 +42,8 @@
             </ul>
           </div><!-- /.navbar-collapse -->
           <hr class="navbar-divider">
-        </div><!-- /.container-fluid -->
-      </nav>
-         
-        
-      <?php
+          
+          <?php
 if (has_nav_menu('header-menu')) {
     wp_nav_menu(array(
         'theme_location' => 'header-menu',
@@ -57,9 +51,17 @@ if (has_nav_menu('header-menu')) {
         'container'      => 'div',
         'container_class'=> 'collapse navbar-collapse',
         'container_id'   => 'bs-example-navbar-collapse-1',
+        'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s<li><a href="' . esc_url(get_permalink(get_page_by_title('All Posts'))) . '">Blog</a></li></ul>',
     ));
 }
 ?>
+
+
+        </div><!-- /.container-fluid -->
+      </nav>
+         
+        
+
 
       
     </header>

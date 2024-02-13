@@ -688,3 +688,22 @@ ul.social-list li a:hover, ul.social-list li a:focus{
 	position: absolute;
 	right: 0;
 }
+
+/* Style for All Posts Template */
+.post-list {
+    margin-top: 20px;
+}
+
+.post-item {
+    border-bottom: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.entry-title {
+    font-size: 1.5em;
+}
+
+.entry-content {
+    margin-top: 10px;
+}
