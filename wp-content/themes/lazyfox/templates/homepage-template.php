@@ -46,22 +46,19 @@
     <div class="row">
 
       <?php 
-      // Define the query to get the latest posts
       $args = array(
         'post_type'      => 'post',
-        'posts_per_page' => 3, // Number of posts to display
+        'posts_per_page' => 3, 
       );
 
       $query = new WP_Query($args);
 
-      // Loop through the posts
       while ($query->have_posts()) : $query->the_post();
       ?>
 
         <div class="col-md-4">
           <div class="card">
             <?php
-            // Display the post thumbnail
             if (has_post_thumbnail()) {
               the_post_thumbnail('full', array('class' => 'card-img-top img-responsive max-width-100'));
             }
@@ -77,7 +74,6 @@
         </div>
 
       <?php endwhile;
-      // Reset post data
       wp_reset_postdata();
       ?>
 
