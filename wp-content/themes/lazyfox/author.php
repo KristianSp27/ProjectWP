@@ -1,7 +1,4 @@
 <?php get_header(); ?>
-<aside id="sidebar" class="col-md-4">
-    <?php dynamic_sidebar('main-sidebar'); ?>
-</aside>
 <section id="testimonial" class="testimonial">
     <div class="container">
         <div class="heading-wraper text-center">
