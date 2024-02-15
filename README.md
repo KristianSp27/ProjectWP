@@ -1,5 +1,9 @@
-This is a basic WordPress project with a custom theme and a custom plugin for Anime.
+This is a basic WordPress blog with a custom theme and a custom plugin.
 
-I have selected a static HTML that I have converted to a dynamic WordPress project for my Softuni exam.
+I have based the theme on the Lazyfox html theme, by converting it into one suitable for Wordpress.
 
-Currently, this is a WIP and everything, including this file, will be receiving updates.
+I have added two plugins:
+1. Custom post type plugin
+2. Dark mode plugin
+
+I have added a couple of pages with varying functionalities suitable for a blog.
