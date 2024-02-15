@@ -47,4 +47,16 @@ function lazyfox_register_my_menus() {
   }
   add_action( 'init', 'lazyfox_register_my_menus' );
 
+  function lazyfox_register_sidebar() {
+    register_sidebar(array(
+        'name'          => __('Main Sidebar', 'lazyfox'),
+        'id'            => 'main-sidebar',
+        'description'   => __('This is the main sidebar that appears on the right side of the page.', 'lazyfox'),
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h4 class="widget-title">',
+        'after_title'   => '</h4>',
+    ));
+}
+add_action('widgets_init', 'lazyfox_register_sidebar');
 

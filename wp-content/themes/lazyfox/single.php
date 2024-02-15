@@ -3,7 +3,9 @@
 <?php if ( have_posts() ) : ?>
 
     <?php while( have_posts() ) : the_post(); ?>
-
+    <aside id="sidebar" class="col-md-4">
+    <?php dynamic_sidebar('main-sidebar'); ?>
+</aside>
     <section id="testimonial" class= <?php post_class('testimonial')?>>
       <div class="container">
         <div class="heading-wraper text-center">
