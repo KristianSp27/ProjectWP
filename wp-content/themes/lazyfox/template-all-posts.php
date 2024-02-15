@@ -5,9 +5,13 @@ Template Name: All Posts Template
 get_header();
 ?>
 
-<div id="primary" class="content-area">
-    <main id="main" class="site-main" role="main">
+<div id="primary" class="content-area" style="display: flex; flex-wrap: wrap;">
 
+    <aside id="sidebar" class="widget-area" style="width: 30%;">
+        <?php dynamic_sidebar('main-sidebar'); ?>
+    </aside>
+
+    <main id="main" class="site-main" role="main" style="flex: 1;">
         <div class="post-list">
             <?php
             $args = array(
@@ -37,9 +41,10 @@ get_header();
             endif;
             ?>
         </div>
-
     </main>
+
 </div>
+
 
 <?php
 get_footer();

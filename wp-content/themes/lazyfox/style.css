@@ -9,3 +9,15 @@ Tested up to: 6.4
 Requires PHP: 8.1
 Text Domain: softuni
 */
+#primary {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#main {
+    flex: 1;
+}
+
+#sidebar {
+    width: 30%; /* Adjust the width according to your design */
+}
