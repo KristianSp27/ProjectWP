@@ -189,6 +189,7 @@
                     $query = new WP_Query($args);
 
                     while ($query->have_posts()) : $query->the_post();
+                    //send post statuses too wip
                     ?>
 
                         <div class="testimonial-container">

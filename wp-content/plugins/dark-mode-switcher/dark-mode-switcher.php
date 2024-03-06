@@ -5,7 +5,7 @@
  * Version: 1.0
  * Author: Kristian
  */
-
+//fix the global dark mode
 function dark_mode_switcher_enqueue_scripts() {
     wp_enqueue_script('jquery');
 
